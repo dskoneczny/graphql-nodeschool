@@ -1,11 +1,6 @@
 const { GraphQLServer } = require('graphql-yoga')
 // https://github.com/dskoneczny/graphql-nodeschool
-const typeDefs = `
-  type Query {
-    hello: String!
-    helloWithName(name: String!): String!
-  }
-`
+
 const resolvers = {
   Query: {
     hello: () => 'Hello World!',
@@ -13,7 +8,7 @@ const resolvers = {
   }
 }
 const server = new GraphQLServer({
-  typeDefs,
+  typeDefs: './src/schema.graphql',
   resolvers
 })
 
