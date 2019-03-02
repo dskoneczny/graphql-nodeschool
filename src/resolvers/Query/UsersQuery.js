@@ -5,7 +5,8 @@ const getUsers = () => {
 }
 
 const getUser = (parent, params) => {
-  const result =  users.find(item => item.id == params.id)
+  global.users = global.users || []
+  const result =  global.users.find(item => item.id == params.id)
   if (!result) {
     throw new Error("Uzytkownik o danym id nie został znaleziony")
   }
