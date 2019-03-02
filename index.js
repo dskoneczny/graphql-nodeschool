@@ -12,7 +12,7 @@ client.connect()
 // QUERIES
 const { hello, helloWithName } = require('./src/resolvers/Query/HelloQuery')
 const { getUsers, getUser } = require('./src/resolvers/Query/UsersQuery')
-const { getOrders } = require('./src/resolvers/Query/OrdersQuery')
+const { getOrders, getOrder } = require('./src/resolvers/Query/OrdersQuery')
 // MUTATIONS
 const { addUser } = require('./src/resolvers/Mutation/UsersMutation')
 
@@ -24,7 +24,8 @@ const Query = {
   helloWithName,
   getUsers,
   getUser,
-  getOrders
+  getOrders,
+  getOrder
 }
 
 const Mutation = {
