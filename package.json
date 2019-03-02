@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "start": "node ."
+    "start": "nodemon ."
   },
   "dependencies": {
-    "graphql-yoga": "^1.17.4"
+    "graphql-yoga": "^1.17.4",
+    "nodemon": "^1.18.10"
   }
 }
