@@ -8,4 +8,5 @@ type Query {
   hello: String!
   helloWithName(name: String!): String!
   getUsers: [User]
+  getUser(id: ID!): User
 }
