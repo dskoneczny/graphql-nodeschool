@@ -1,10 +1,12 @@
 const { GraphQLServer } = require('graphql-yoga')
 const { hello, helloWithName } = require('./src/resolvers/Query/HelloQuery')
+const { getUsers } = require('./src/resolvers/Query/UsersQuery')
 // https://github.com/dskoneczny/graphql-nodeschool
 
 const Query = {
   hello,
-  helloWithName
+  helloWithName,
+  getUsers
 }
 
 const resolvers = {
