@@ -36,9 +36,13 @@ const context = {
   db: client
 }
 
+// RESOLVE MAP PROPERTY
 const resolvers = {
   Query,
-  Mutation
+  Mutation,
+  Order: {
+    user: (order) => getUser(order, { id: order.UserId}, context)
+  }
 }
 
 const server = new GraphQLServer({
