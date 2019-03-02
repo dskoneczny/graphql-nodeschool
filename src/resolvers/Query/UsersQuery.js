@@ -1,18 +1,7 @@
-const users = [
-  {
-    id: 1,
-    firstName: 'John',
-    lastName: 'Doe'
-  },
-  {
-    id: 2,
-    firstName: 'Mark',
-    lastName: 'Price'
-  },
-]
-
 const getUsers = () => {
-  return users
+  global.users = global.users || []
+
+  return global.users
 }
 
 const getUser = (parent, params) => {
