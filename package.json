@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "node ."
+  },
   "dependencies": {
     "graphql-yoga": "^1.17.4"
   }

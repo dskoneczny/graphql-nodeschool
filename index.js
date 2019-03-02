@@ -1,5 +1,7 @@
 const { GraphQLServer } = require('graphql-yoga')
 
+// https://github.com/dskoneczny/graphql-nodeschool
+
 const typeDefs = `
   type Query {
     hello: String!
