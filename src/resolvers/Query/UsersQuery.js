@@ -1,7 +1,6 @@
-const getUsers = () => {
-  global.users = global.users || []
-
-  return global.users
+const getUsers = async (parent, params, context) => {
+  const result = await context.db.query('SELECT * FROM "Users"')
+  return result.rows
 }
 
 const getUser = (parent, params) => {
