@@ -10,6 +10,7 @@ const Query = {
 const resolvers = {
   Query
 }
+
 const server = new GraphQLServer({
   typeDefs: './src/schema.graphql',
   resolvers
