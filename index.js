@@ -46,7 +46,9 @@ const resolvers = {
     }
   },
   User: {
-    orders: (user, params) => getUserOrders(user, params, context)
+    orders: (user, params) => {
+      return getUserOrders(user, params, context)
+    }
   }
 }
 
