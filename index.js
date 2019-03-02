@@ -4,7 +4,7 @@ const { Client } = require('pg')
 // DATABASE CONNECTION
 // https://bit.ly/2SCIst1
 const DATABASE_URL = "postgres://ptzlbdyjlabixo:04a27a0b7e06081a397d2d49776427af9804b66a1870ffbf19d13668736a5b80@ec2-46-137-121-216.eu-west-1.compute.amazonaws.com:5432/d2rd2bavu9mj8a?ssl=true"
-const client = new Client({ connectionString: DATABASE_URL})
+const client = new Client({ connectionString: DATABASE_URL })
 client.connect()
 
 // QUERIES
@@ -28,6 +28,10 @@ const Mutation = {
   addUser
 }
 
+const context = {
+  db: client
+}
+
 const resolvers = {
   Query,
   Mutation
@@ -35,7 +39,8 @@ const resolvers = {
 
 const server = new GraphQLServer({
   typeDefs: './src/schema.graphql',
-  resolvers
+  resolvers,
+  context
 })
 
 server.start(() => console.log('Server is running on localhost:4000'))
