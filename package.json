@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "nodemon ."
+    "start": "nodemon --ext js,graphql --watch ./src --watch ."
   },
   "dependencies": {
     "graphql-yoga": "^1.17.4",
