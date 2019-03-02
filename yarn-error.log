@@ -1,0 +1,28 @@
+Arguments: 
+  /usr/local/Cellar/node/11.3.0_1/bin/node /usr/local/Cellar/yarn/1.12.3/libexec/bin/yarn.js add graphql-yoga
+
+PATH: 
+  /Users/dskoneczny/.cargo/bin:/usr/local/Cellar/node/11.3.0_1/bin:/Users/dskoneczny/bin:/usr/local/bin:/Users/dskoneczny/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/dskoneczny/razorbear/flutter/flutter/bin
+
+Yarn version: 
+  1.12.3
+
+Node version: 
+  8.11.3
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com registry.yarnpkg.com:443
+      at errnoException (dns.js:50:10)
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
