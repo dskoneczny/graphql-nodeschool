@@ -1,6 +1,13 @@
 const { GraphQLServer } = require('graphql-yoga')
+
+// QUERIES
 const { hello, helloWithName } = require('./src/resolvers/Query/HelloQuery')
 const { getUsers, getUser } = require('./src/resolvers/Query/UsersQuery')
+
+// MUTATIONS
+const { addUser } = require('./src/resolvers/Mutation/UsersMutation')
+
+// GITHUB URL:
 // https://github.com/dskoneczny/graphql-nodeschool
 
 const Query = {
@@ -10,8 +17,13 @@ const Query = {
   getUser
 }
 
+const Mutation = {
+  addUser
+}
+
 const resolvers = {
-  Query
+  Query,
+  Mutation
 }
 
 const server = new GraphQLServer({
