@@ -10,7 +10,14 @@ const getOrder = async (parent, params, context) => {
   return result.rows[0]
 }
 
+const getUserOrders = async (parent, params, context) => {
+  const result = await context.db.query(`SELECT * FROM "Orders" WHERE "UserId" = ${parent.id}`)
+
+  return result.rows
+}
+
 module.exports = {
   getOrders,
-  getOrder
+  getOrder,
+  getUserOrders
 }
