@@ -4,11 +4,19 @@ type User {
   lastName: String!
 }
 
+type Order {
+  id: ID!
+  orderName: String
+  orderDescription: String
+  user: User
+}
+
 type Query {
   hello: String!
   helloWithName(name: String!): String!
   getUsers: [User]
   getUser(id: ID!): User
+  getOrders: [Order]
 }
 
 type Mutation {
