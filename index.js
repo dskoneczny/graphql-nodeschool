@@ -41,7 +41,9 @@ const resolvers = {
   Query,
   Mutation,
   Order: {
-    user: (order) => getUser(order, { id: order.UserId}, context)
+    user: (order) => {
+      return getUser(order, { id: order.UserId}, context)
+    }
   }
 }
 
